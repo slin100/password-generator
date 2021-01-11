@@ -1,8 +1,7 @@
 from time import sleep
-
-number=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-number1=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','-','_','*','/','+','.',',',':',';','#','~','ß','=','&','%','$','§','!','°','^','<','>','|']
-
+import string
+zahl=string.ascii_letters
+zahl1 = string.ascii_letters + string.digits + string.punctuation
 from random import randint
 for i in range(200):
     def pick(words):
@@ -12,11 +11,11 @@ for i in range(200):
         return word_picked
     while True:
         for i in range(20):
-            print(pick(number),sep="",end="")
+            print(pick(zahl),sep="",end="")
         break
     
     print(sep="\n")
-    print('or',sep="\n")
+    print('oder',sep="\n")
 
     def pick(words):
         num_words = len(words)
@@ -25,7 +24,7 @@ for i in range(200):
         return word_picked
     while True:
         for i in range(20):
-            print(pick(number1),sep="",end="")
+            print(pick(zahl1),sep="",end="")
         input()
         break
     print(sep="\n")
